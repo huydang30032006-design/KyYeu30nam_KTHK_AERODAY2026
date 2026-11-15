@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kỷ yếu 30 năm đào tạo ngành Kỹ thuật Hàng không 1996–2026 · AERODAY 2026</title>
+<meta name="description" content="Kỷ yếu Sinh viên – Cựu sinh viên, 30 năm đào tạo ngành Kỹ thuật Hàng không, Khoa Kỹ thuật Giao thông, Trường Đại học Bách khoa – ĐHQG-HCM. AERODAY 14.11.2026.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a1c3f">
+<meta property="og:title" content="Kỷ yếu 30 năm ngành Kỹ thuật Hàng không · AERODAY 2026">
+<meta property="og:description" content="Kỷ yếu Sinh viên – Cựu sinh viên 1996–2026, Trường Đại học Bách khoa – ĐHQG-HCM.">
+<meta property="og:image" content="assets/cover.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preload" as="image" href="pages/001.webp">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div>
+
+<header id="top">
+  <button class="ibtn" id="btnToc" aria-label="Mục lục" title="Mục lục (M)">
+    <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Mục lục</span>
+  </button>
+  <a class="brand" href="#p=1" title="Về trang bìa">
+    <img src="assets/favicon.png" alt="" width="34" height="34">
+    <span class="brand-t"><b>Kỷ yếu 30 năm</b><i>Kỹ thuật Hàng không · AERODAY 2026</i></span>
+  </a>
+  <div class="spacer"></div>
+  <button class="ibtn" id="btnSearch" aria-label="Tìm kiếm" title="Tìm tên, lớp, cơ quan (/)">
+    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span>Tìm kiếm</span>
+  </button>
+  <button class="ibtn" id="btnZoom" aria-label="Phóng to" title="Phóng to / thu nhỏ (Z)">
+    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M8 11h6M11 8v6" id="zoomIco"/></svg>
+  </button>
+  <button class="ibtn hide-s" id="btnFull" aria-label="Toàn màn hình" title="Toàn màn hình (F)">
+    <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+  </button>
+  <a class="ibtn" id="btnPdf" href="KyYeu_30nam_KTHK_AERODAY2026.pdf" download aria-label="Tải PDF" title="Tải bản PDF">
+    <svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span class="hide-s">PDF</span>
+  </a>
+</header>
+
+<main id="stage" tabindex="-1">
+  <button class="nav prev" id="prev" aria-label="Trang trước"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div id="book" aria-live="polite"></div>
+  <button class="nav next" id="next" aria-label="Trang sau"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div id="zoomwrap" hidden></div>
+</main>
+
+<footer id="bar">
+  <div id="where"><span id="sec"></span></div>
+  <div class="slider">
+    <input id="range" type="range" min="1" max="487" value="1" aria-label="Chọn trang">
+    <div id="peek" hidden><img alt=""><span></span></div>
+  </div>
+  <form id="goto" autocomplete="off">
+    <label for="pnum" class="sr">Trang</label>
+    <input id="pnum" inputmode="numeric" value="1" aria-label="Số trang"><span id="ptot">/ 487</span>
+  </form>
+</footer>
+
+<aside id="drawer" aria-hidden="true">
+  <div class="dr-head">
+    <div class="tabs" role="tablist">
+      <button role="tab" data-tab="toc" class="on">Mục lục</button>
+      <button role="tab" data-tab="search">Tìm kiếm</button>
+    </div>
+    <button class="ibtn" id="btnClose" aria-label="Đóng"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <section id="tab-toc" class="pane"></section>
+  <section id="tab-search" class="pane" hidden>
+    <div class="sbox">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+      <input id="q" type="search" placeholder="Tên, mã (1998HK-06), lớp, cơ quan…" autocomplete="off" spellcheck="false">
+    </div>
+    <p class="hint" id="shint">Gõ không dấu cũng được, ví dụ “tran duy hao”, “2006HK” hay “Vietnam Airlines”.</p>
+    <div id="results"></div>
+  </section>
+</aside>
+<div id="scrim" hidden></div>
+<div id="toast" role="status" hidden></div>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
